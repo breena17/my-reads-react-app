@@ -4,12 +4,9 @@ import Shelf from './Shelf'
 import * as BooksAPI from '../BooksAPI'
 
 class HomePage extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-            books: []
-        }
-    }
+    state = {
+        books: []
+      }
     componentDidMount() {
         BooksAPI.getAll()
         .then((books) => {
@@ -17,8 +14,15 @@ class HomePage extends React.Component{
             this.setState({ books })
         })
     }
-
-
+    updateShelf= (book,shelf) => {
+        BooksAPI.update(book,shelf)
+        .then(()=> {
+            BooksAPI.getAll().then((books) => {
+                this.setState({books})
+            })
+        })
+        
+    }
     render() {
         return (
             <div className="list-books">
@@ -27,9 +31,9 @@ class HomePage extends React.Component{
             </div>
             <div className="list-books-content">
               <div>
-                <Shelf name="Currently Reading" books={this.state.books.filter(b => b.shelf === "currentlyReading")}/>
-                <Shelf name="Want To Read" books={this.state.books.filter(b => b.shelf === "wantToRead")}/>
-                <Shelf name="Read" books={this.state.books.filter(b => b.shelf === "read")}/>
+                <Shelf name="Currently Reading" books={this.state.books.filter(books => books.shelf === "currentlyReading")} updateShelf={this.updateShelf}/>
+                <Shelf name="Want To Read" books={this.state.books.filter(books => books.shelf === "wantToRead")} updateShelf={this.updateShelf}/>
+                <Shelf name="Read" books={this.state.books.filter(books => books.shelf === "read")} updateShelf={this.updateShelf}/>
               </div>
             </div>
             <div className="open-search">

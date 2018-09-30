@@ -1,10 +1,12 @@
 import React from 'react'
 import Book from './Book'
+import * as BooksAPI from '../BooksAPI'
 
 class Shelf extends React.Component {
     componentDidMount() {
         console.log(this);
     }
+    
     render() {
         return (
             <div>
@@ -12,7 +14,7 @@ class Shelf extends React.Component {
                   <h2 className="bookshelf-title">{this.props.name}</h2>
                   <div className="bookshelf-books">
                     <ol className="books-grid">
-                      {this.props.books.map((book, key) => <Book book={book} key={key}/>)}
+                      {this.props.books.map((book, key) => <Book book={book} key={key} updateShelf={this.props.updateShelf}/>)}
                     </ol>
                   </div>
                 </div>
