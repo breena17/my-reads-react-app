@@ -29,7 +29,7 @@ class SearchPage extends React.Component{
             BooksAPI.search(this.state.query)
             .then((searchBooks) => {
                 console.log(searchBooks)
-                this.setState({searchBooks})
+                this.setState({searchBooks: searchBooks})
             })
         } else {
             this.setState({ searchBooks: [] });
@@ -61,7 +61,7 @@ class SearchPage extends React.Component{
                 </div>
                 <div className="search-books-results">
                     <ol className="books-grid">
-                    {this.state.searchBooks.map((searchBook) => (<Book book={searchBook} key={searchBook.id} updateShelf={this.props.updateShelf}/>))}
+                    {this.state.searchBooks.map((searchBook) => (<Book book={searchBook} key={searchBook.id} updateShelf={this.updateShelf}/>))}
                     </ol>
                 </div>
             </div>
