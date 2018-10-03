@@ -1,11 +1,17 @@
+img[src*='#left'] { 
+    float: left;
+}
+img[src*='#right'] { 
+    float: right;
+}
 # MyReads Project
 
 The MyReads Project covers Udacity's React Fundamentals course. MyReads has been my first experience creating an app with React. MyReads allows you to track your favorite books using React components. Use purple ADD button at the bottom of the page to advance to the search page. From there you can search for books by author or title to add them to the **Currently Reading**, **Want To Read**, or **Read** bookshelves.
-|
-![MyReads Home Preview](https://github.com/breena17/my-reads-react-app/blob/master/img/MyReads-1.PNG)
-|
-![MyReads Search Preview](https://github.com/breena17/my-reads-react-app/blob/master/img/MyReads-2.PNG)
-|
+
+![MyReads Home Preview](https://github.com/breena17/my-reads-react-app/blob/master/img/MyReads-1.PNG#left)
+
+![MyReads Search Preview](https://github.com/breena17/my-reads-react-app/blob/master/img/MyReads-2.PNG#right)
+
 
 
 ##Installation
