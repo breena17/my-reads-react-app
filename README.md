@@ -1,9 +1,12 @@
+(setq markdown-xhtml-header-content
+      "<style type='text/css'>
 img[src*='#left'] { 
     float: left;
 }
 img[src*='#right'] { 
     float: right;
 }
+</style>")
 # MyReads Project
 
 The MyReads Project covers Udacity's React Fundamentals course. MyReads has been my first experience creating an app with React. MyReads allows you to track your favorite books using React components. Use purple ADD button at the bottom of the page to advance to the search page. From there you can search for books by author or title to add them to the **Currently Reading**, **Want To Read**, or **Read** bookshelves.
