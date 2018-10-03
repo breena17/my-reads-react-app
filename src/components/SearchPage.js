@@ -13,13 +13,11 @@ class SearchPage extends React.Component{
     componentDidMount() {
         BooksAPI.getAll()
         .then((books) => {
-            console.log(books)
             this.setState({ books })
         })
     }
     updateQuery = (query) => {
-        this.setState({query: query})
-        this.updateSearchedBooks(query);
+        this.setState({query: query},this.updateSearchedBooks);
     }
     updateSearchedBooks = (query) => {
         if (this.state.query === "" || this.state.query === undefined) {
