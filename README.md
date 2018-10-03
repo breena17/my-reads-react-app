@@ -89,6 +89,6 @@ This starter project was bootstrapped with [Create React App](https://github.com
 ## Contributing
 
 This repository was cloned from the Udacity MyReads starter repo. If you would like to use the Udacity MyReads starter repo, you can find the link to it below.
-*[Udacity MyReads Starter Repo](https://github.com/udacity/reactnd-project-myreads-starter) 
+* [Udacity MyReads Starter Repo](https://github.com/udacity/reactnd-project-myreads-starter) 
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
