@@ -6,6 +6,7 @@ The MyReads Project covers Udacity's React Fundamentals course. MyReads has been
 
 <img style="float:right;" src="https://github.com/breena17/my-reads-react-app/blob/master/img/MyReads-2.PNG" alt="MyReads Search Preview">
 </div>
+
 ## Installation
 To start, install the repository to your local computer, and download the necessary dependancies.
 * `npm install` - Installs necessary project dependencies
