@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Book from './Book'
 import * as BooksAPI from '../BooksAPI'
-import escapeRegExp from 'escape-string-regexp'
 
 class SearchPage extends React.Component{
     state = {
