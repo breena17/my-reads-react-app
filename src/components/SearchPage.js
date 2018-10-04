@@ -21,18 +21,17 @@ class SearchPage extends React.Component{
     }
     updateSearchedBooks = (query) => {
         if (this.state.query === "" || this.state.query === undefined) {
-            this.setState({ searchBooks:[] });
+            return this.setState({ searchBooks:[] });
         }
-        if(this.state.query) {
-            BooksAPI.search(this.state.query)
-            .then((searchBooks) => {
-                console.log(searchBooks)
-                this.setState({searchBooks: searchBooks})
-            })
-        } else {
-            this.setState({ searchBooks: [] });
-        }
-        
+        BooksAPI.search(this.state.query)
+        .then(Response => {
+            console.log(Response);
+            if(Response.error) {
+                return this.setState({searchBooks:[]});
+            } else {
+                return this.setState({searchBooks: Response});
+            }
+        }) 
     }
     updateShelf= (book,shelf) => {
         BooksAPI.update(book,shelf)
