@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom'
 import Shelf from './Shelf'
 import * as BooksAPI from '../BooksAPI'
 
+//Maeva and Ryan Waite YouTube tutorials were used as guidance to complete this component
+//Maeva - https://www.youtube.com/watch?v=i6L2jLHV9j8
+//Ryan - https://www.youtube.com/watch?v=acJHkd6K5kI
+
 class HomePage extends React.Component{
     state = {
         books: []

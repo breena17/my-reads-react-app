@@ -92,3 +92,7 @@ This repository was cloned from the Udacity MyReads starter repo. If you would l
 * [Udacity MyReads Starter Repo](https://github.com/udacity/reactnd-project-myreads-starter) 
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Tutorials
+
+This app was created with the guidance of [Maeva](https://www.youtube.com/watch?v=i6L2jLHV9j8) and [Ryan Waite](https://www.youtube.com/watch?v=acJHkd6K5kI) YouTube tutorials. Their help and detailed explanations of building MyReads in React was beyond helpful.  

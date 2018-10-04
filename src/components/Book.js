@@ -1,5 +1,8 @@
 import React from 'react'
 
+//Maeva and Ryan Waite YouTube tutorials were used as guidance to complete this component
+//Maeva - https://www.youtube.com/watch?v=i6L2jLHV9j8
+//Ryan - https://www.youtube.com/watch?v=acJHkd6K5kI
 
 class Book extends React.Component {
     render() {
