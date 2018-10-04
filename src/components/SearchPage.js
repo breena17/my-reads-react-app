@@ -29,9 +29,16 @@ class SearchPage extends React.Component{
             if(Response.error) {
                 return this.setState({searchBooks:[]});
             } else {
+                Response.forEach(searchItem => {
+                    let match = this.state.books.filter(item => item.id === searchItem.id);
+                    if(match[0]) {
+                        console.log('match');
+                        searchItem.shelf = match[0].shelf;
+                    }
+                });
                 return this.setState({searchBooks: Response});
             }
-        }) 
+        }); 
     }
     updateShelf= (book,shelf) => {
         BooksAPI.update(book,shelf)
