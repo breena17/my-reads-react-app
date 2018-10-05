@@ -28,7 +28,6 @@ class SearchPage extends React.Component{
         }
         BooksAPI.search(this.state.query)
         .then(Response => {
-            console.log(Response);
             if(Response.error) {
                 return this.setState({searchBooks:[]});
             } else {
