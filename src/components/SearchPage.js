@@ -35,8 +35,9 @@ class SearchPage extends React.Component{
                 Response.forEach(searchItem => {
                     let match = this.state.books.filter(item => item.id === searchItem.id);
                     if(match[0]) {
-                        console.log('match');
                         searchItem.shelf = match[0].shelf;
+                    } else {
+                        searchItem.shelf = 'none';
                     }
                 });
                 return this.setState({searchBooks: Response});
